@@ -1,0 +1,64 @@
+#read csv
+with open("emp.csv") as fp:
+    data = fp.read()
+    print(data)
+
+#we can read only csv file without csv module we cannot access data columnwise.
+#data in a complete string format.
+#-------------------------------------------------------------------------------------------------
+#we can read csv in 2 format
+#1.read in list
+#2.read in dictionary
+
+#1.read in list of lines
+#for print in list
+
+#import csv
+#with open("emp.csv") as fp:
+#    r = csv.reader(fp)
+#     print(list(r))
+
+#for access column wise date
+#import csv
+
+#with open("emp.csv") as fp:
+ #   r = csv.reader(fp)
+  #  for lines in r:
+   #     print(lines[0],lines[1])
+#------------------------------------------------------------------------------------------------
+
+#2.read in dictionary of lines
+#for print in dict
+
+#import csv
+#with open("emp.csv") as fp:
+ #   r = csv.DictReader(fp)
+  #  for line in r:
+   #     print(line['id'],line['name'])
+
+#-------------------------------------------------------------------------------------------------------------
+
+#we can write csv in 2 format
+#1.csv write in list
+#2.csv write in dict
+#in csv two parts  header and rows
+
+#import csv
+#with open("product.csv","w") as fp:
+ #   w = csv.writer(fp)
+  #  w.writerow(['productid','productname','productquantity'])
+   # w.writerows([[1,'soap',23],[2,'shampoo',25]])
+
+#for remove blankline in csv use (newline=" ") in with open
+
+#-----------------------------------------------------------------------------------------------------
+
+#csv write in dictionary
+
+#import csv
+#with open ("product1",'w',newline="") as fp:
+ #   col = ['a','b','c']
+  #  w =csv.DictWriter(fp,fieldnames=col)
+   # w.writeheader()
+    #w.writerow({'a':100,'b':200,'c':300})
+   # w.writerows([{'a':500,'b':450,'c':680},{'a':250,'b':4580,'c':980}])
